@@ -2558,7 +2558,7 @@ Function concatedatafiles(type,variablename)
 
 				//Get names for duplication
 		wave variablewave = $variablename
-		string newvariablename = "Temp_"+num2str(dfnumb)
+		string newvariablename = "Temporary_"+num2str(dfnumb)
 		ncolumn_thereare = Dimsize(variablewave,1)
 		if(ncolumn_thereare != ncolumn_shouldbe)
 			Duplicate/O variablewave, MDF:$Newvariablename
@@ -2577,7 +2577,7 @@ Function concatedatafiles(type,variablename)
 	
 	setdatafolder mdf
 	//create the lists of the matrix waves and datetime waves
-		string namelist = wavelist("Temp*",";","")
+		string namelist = wavelist("Temporary*",";","")
 	
 	concatenate/O/NP=0 namelist, ConcatenatedVariable
 	
@@ -2593,7 +2593,7 @@ Function concatedatafiles(type,variablename)
 
 		//Get names for duplication
 		wave variablewave = $variablename
-		newvariablename = "Temp_"+num2str(dfnumb)
+		newvariablename = "Temporary_"+num2str(dfnumb)
 		Killwaves $newvariablename
 				
 	endFor
