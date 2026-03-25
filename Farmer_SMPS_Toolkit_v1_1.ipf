@@ -1461,7 +1461,10 @@ Function MakeAllTimeWaves()
 		If (SoftwareVersion==1)
 			concatedatafiles(1,"SheathTemp(C)")
 			concatedatafiles(1,"SheathPressure(kPa)")
-		else
+		elseif (SoftwareVersion==3)
+			concatedatafiles(1,"Temp")
+			concatedatafiles(1,"Press")
+		else		
 			concatedatafiles(1,"SampleTemp(C)")
 			concatedatafiles(1,"SamplePressure(kPa)")
 		endif
